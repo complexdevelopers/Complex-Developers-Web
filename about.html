@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Complex Developers</title>
+    <meta name="description" content="Learn about Complex Developers - our vision, mission, story, and the talented team behind our innovative digital solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Complex Developers</a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="active" data-translate="nav.about">About</a></li>
+                <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="lang-toggle">EN</button>
+                <button class="theme-toggle">🌙 Dark</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background"></div>
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1 data-translate="nav.about">About Us</h1>
+            <p>Building the future of digital innovation</p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section">
+        <div class="vision-mission-grid">
+            <div class="glass-card fade-up">
+                <h2 style="margin-bottom: 1.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="about.vision">Our Vision</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    To be the leading digital agency that transforms complex ideas into elegant, scalable, and innovative solutions. 
+                    We envision a future where technology seamlessly integrates with human creativity to solve real-world problems.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h2 style="margin-bottom: 1.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="about.mission">Our Mission</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    To deliver exceptional digital experiences through cutting-edge technology, creative design, and unwavering commitment to quality. 
+                    We empower businesses to thrive in the digital age by providing comprehensive, innovative solutions tailored to their unique needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Timeline -->
+    <section class="section" style="background: var(--bg-secondary); border-radius: 30px; margin: 4rem auto; max-width: 1400px;">
+        <h2 class="section-title fade-up" data-translate="sections.ourStory">Our Story</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-up">
+                <h3 style="margin-bottom: 0.5rem; color: var(--accent-blue);">2020 - The Beginning</h3>
+                <p style="color: var(--text-secondary);">
+                    Complex Developers was founded with a vision to bridge the gap between complex technology and accessible solutions. 
+                    We started as a small team of passionate developers.
+                </p>
+            </div>
+            <div class="timeline-item fade-up">
+                <h3 style="margin-bottom: 0.5rem; color: var(--accent-purple);">2021 - Expansion</h3>
+                <p style="color: var(--text-secondary);">
+                    We expanded our services to include AI integration and cloud solutions, quickly becoming a trusted partner for innovative businesses.
+                </p>
+            </div>
+            <div class="timeline-item fade-up">
+                <h3 style="margin-bottom: 0.5rem; color: var(--accent-blue);">2022 - Recognition</h3>
+                <p style="color: var(--text-secondary);">
+                    Our commitment to excellence earned us recognition in the industry, with projects spanning multiple continents and diverse sectors.
+                </p>
+            </div>
+            <div class="timeline-item fade-up">
+                <h3 style="margin-bottom: 0.5rem; color: var(--accent-purple);">2023 - Innovation</h3>
+                <p style="color: var(--text-secondary);">
+                    We launched our AI engineering division and advanced automation services, helping businesses streamline their operations.
+                </p>
+            </div>
+            <div class="timeline-item fade-up">
+                <h3 style="margin-bottom: 0.5rem; color: var(--accent-blue);">2024 - Future Forward</h3>
+                <p style="color: var(--text-secondary);">
+                    Today, we continue to push boundaries, exploring emerging technologies and delivering solutions that shape the future of digital innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="section">
+        <h2 class="section-title fade-up" data-translate="sections.meetTeam">Meet the Team</h2>
+        <div class="team-grid">
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">JD</div>
+                <h3>Joe Munene</h3>
+                <p style="color: var(--accent-blue); margin-bottom: 0.5rem;">CEO & Founder</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Visionary leader with 15+ years of experience in technology and business strategy.
+                </p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">JS</div>
+                <h3>Issac</h3>
+                <p style="color: var(--accent-purple); margin-bottom: 0.5rem;">CTO</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Expert in software architecture and emerging technologies, driving technical innovation.
+                </p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">MW</div>
+                <h3>Calvince</h3>
+                <p style="color: var(--accent-blue); margin-bottom: 0.5rem;">Lead Developer</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Full-stack developer specializing in modern web technologies and cloud solutions.
+                </p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">SB</div>
+                <h3>Joe Munene</h3>
+                <p style="color: var(--accent-purple); margin-bottom: 0.5rem;">AI Engineer</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Machine learning specialist creating intelligent solutions for complex problems.
+                </p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">DJ</div>
+                <h3>Raymond</h3>
+                <p style="color: var(--accent-blue); margin-bottom: 0.5rem;">Design Lead</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Creative director crafting beautiful and intuitive user experiences.
+                </p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar-placeholder">EM</div>
+                <h3>Frankline Zavai</h3>
+                <p style="color: var(--accent-purple); margin-bottom: 0.5rem;">Project Manager</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Ensuring smooth project delivery and exceptional client satisfaction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section" style="background: var(--bg-secondary); border-radius: 30px; margin: 4rem auto; max-width: 1400px;">
+        <h2 class="section-title fade-up" data-translate="sections.coreValues">Core Values</h2>
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">🎯 Excellence</h3>
+                <p style="color: var(--text-secondary);">
+                    We strive for excellence in every project, ensuring the highest quality standards and attention to detail.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-purple);">🚀 Innovation</h3>
+                <p style="color: var(--text-secondary);">
+                    We embrace new technologies and innovative approaches to solve challenges and create groundbreaking solutions.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">🤝 Integrity</h3>
+                <p style="color: var(--text-secondary);">
+                    We conduct business with honesty, transparency, and ethical practices, building trust with our clients.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-purple);">💡 Creativity</h3>
+                <p style="color: var(--text-secondary);">
+                    We believe in the power of creative thinking to transform ideas into exceptional digital experiences.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">👥 Collaboration</h3>
+                <p style="color: var(--text-secondary);">
+                    We work closely with our clients as partners, ensuring their vision is realized through collaborative effort.
+                </p>
+            </div>
+            <div class="glass-card fade-up">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-purple);">📈 Growth</h3>
+                <p style="color: var(--text-secondary);">
+                    We are committed to continuous learning and improvement, staying ahead of industry trends and best practices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="glass-card fade-up" style="max-width: 700px; margin: 0 auto; text-align: center; padding: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Ready to Work Together?
+            </h2>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                Let's discuss how we can help bring your vision to life. Get in touch with us today!
+            </p>
+            <a href="contact.html" class="cta-button" data-translate="sections.getQuote">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Complex Developers</h3>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">
+                    Transforming ideas into digital reality with cutting-edge technology solutions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.quickLinks">Quick Links</h3>
+                <a href="index.html" data-translate="nav.home">Home</a>
+                <a href="services.html" data-translate="nav.services">Services</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="about.html" data-translate="nav.about">About</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.services">Services</h3>
+                <a href="services.html">Web Development</a>
+                <a href="services.html">AI Integration</a>
+                <a href="services.html">App Development</a>
+                <a href="services.html">Cloud Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.resources">Resources</h3>
+                <a href="about.html" data-translate="sections.ourStory">Our Story</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">© 2024 Complex Developers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">↑</button>
+
+    <!-- Floating Quote Button -->
+    <a href="contact.html" class="quote-button" data-translate="sections.getQuote">Get a Quote</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

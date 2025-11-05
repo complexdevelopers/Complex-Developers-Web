@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Complex Developers</title>
+    <meta name="description" content="Explore our portfolio of innovative web, mobile, AI, and game development projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .portfolio-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Complex Developers</a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="portfolio.html" class="active" data-translate="nav.portfolio">Portfolio</a></li>
+                <li><a href="about.html" data-translate="nav.about">About</a></li>
+                <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="lang-toggle">EN</button>
+                <button class="theme-toggle">🌙 Dark</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background"></div>
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1 data-translate="nav.portfolio">Portfolio</h1>
+            <p>Showcasing our innovative digital solutions</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons fade-up">
+            <button class="filter-btn active" data-filter="all" data-translate="sections.allProjects">All Projects</button>
+            <button class="filter-btn" data-filter="web" data-translate="portfolio.web">Web</button>
+            <button class="filter-btn" data-filter="app" data-translate="portfolio.app">App</button>
+            <button class="filter-btn" data-filter="ai" data-translate="portfolio.ai">AI</button>
+            <button class="filter-btn" data-filter="game" data-translate="portfolio.game">Game</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Web Projects -->
+            <div class="portfolio-item fade-up" data-category="web" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">E-Commerce Platform</div>
+                <div class="portfolio-overlay">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Modern online store with advanced features and seamless user experience.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="web" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">SaaS Dashboard</div>
+                <div class="portfolio-overlay">
+                    <h3>SaaS Dashboard</h3>
+                    <p>Real-time analytics and management dashboard for enterprise clients.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="web" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Corporate Website</div>
+                <div class="portfolio-overlay">
+                    <h3>Corporate Website</h3>
+                    <p>Responsive corporate website with modern design and CMS integration.</p>
+                </div>
+            </div>
+
+            <!-- App Projects -->
+            <div class="portfolio-item fade-up" data-category="app" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Fitness Tracker App</div>
+                <div class="portfolio-overlay">
+                    <h3>Fitness Tracker App</h3>
+                    <p>Cross-platform mobile app for tracking workouts and health metrics.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="app" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Food Delivery App</div>
+                <div class="portfolio-overlay">
+                    <h3>Food Delivery App</h3>
+                    <p>Native iOS and Android app with real-time order tracking.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="app" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Banking App</div>
+                <div class="portfolio-overlay">
+                    <h3>Banking App</h3>
+                    <p>Secure mobile banking application with biometric authentication.</p>
+                </div>
+            </div>
+
+            <!-- AI Projects -->
+            <div class="portfolio-item fade-up" data-category="ai" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">AI Chatbot System</div>
+                <div class="portfolio-overlay">
+                    <h3>AI Chatbot System</h3>
+                    <p>Intelligent customer service chatbot with natural language processing.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="ai" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Image Recognition Platform</div>
+                <div class="portfolio-overlay">
+                    <h3>Image Recognition Platform</h3>
+                    <p>Advanced ML model for automated image classification and tagging.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="ai" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Predictive Analytics Tool</div>
+                <div class="portfolio-overlay">
+                    <h3>Predictive Analytics Tool</h3>
+                    <p>Business intelligence platform with AI-powered forecasting.</p>
+                </div>
+            </div>
+
+            <!-- Game Projects -->
+            <div class="portfolio-item fade-up" data-category="game" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Mobile Puzzle Game</div>
+                <div class="portfolio-overlay">
+                    <h3>Mobile Puzzle Game</h3>
+                    <p>Engaging puzzle game with stunning graphics and smooth gameplay.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="game" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Multiplayer RPG</div>
+                <div class="portfolio-overlay">
+                    <h3>Multiplayer RPG</h3>
+                    <p>Epic role-playing game with online multiplayer capabilities.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-up" data-category="game" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Racing Game</div>
+                <div class="portfolio-overlay">
+                    <h3>Racing Game</h3>
+                    <p>High-speed racing game with realistic physics and graphics.</p>
+                </div>
+            </div>
+
+            <!-- Additional Web Project -->
+            <div class="portfolio-item fade-up" data-category="web" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Portfolio Website</div>
+                <div class="portfolio-overlay">
+                    <h3>Portfolio Website</h3>
+                    <p>Creative portfolio website with animated transitions and modern UI.</p>
+                </div>
+            </div>
+
+            <!-- Additional App Project -->
+            <div class="portfolio-item fade-up" data-category="app" style="transition: all 0.3s ease;">
+                <div class="portfolio-placeholder">Social Media App</div>
+                <div class="portfolio-overlay">
+                    <h3>Social Media App</h3>
+                    <p>Feature-rich social networking app with real-time messaging.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; margin-top: 4rem;">
+            <div class="glass-card fade-up" style="max-width: 700px; margin: 0 auto; padding: 3rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Want to See Your Project Here?
+                </h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Let's work together to create something amazing. Contact us to discuss your next project!
+                </p>
+                <a href="contact.html" class="cta-button" data-translate="sections.getQuote">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Complex Developers</h3>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">
+                    Transforming ideas into digital reality with cutting-edge technology solutions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.quickLinks">Quick Links</h3>
+                <a href="index.html" data-translate="nav.home">Home</a>
+                <a href="services.html" data-translate="nav.services">Services</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="about.html" data-translate="nav.about">About</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.services">Services</h3>
+                <a href="services.html">Web Development</a>
+                <a href="services.html">AI Integration</a>
+                <a href="services.html">App Development</a>
+                <a href="services.html">Cloud Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.resources">Resources</h3>
+                <a href="about.html" data-translate="sections.ourStory">Our Story</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">© 2024 Complex Developers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">↑</button>
+
+    <!-- Floating Quote Button -->
+    <a href="contact.html" class="quote-button" data-translate="sections.getQuote">Get a Quote</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

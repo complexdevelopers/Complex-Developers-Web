@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Complex Developers</title>
+    <meta name="description" content="Get in touch with Complex Developers. Contact us for inquiries, quotes, or to discuss your next digital project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Complex Developers</a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
+                <li><a href="about.html" data-translate="nav.about">About</a></li>
+                <li><a href="contact.html" class="active" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="lang-toggle">EN</button>
+                <button class="theme-toggle">🌙 Dark</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background"></div>
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1 data-translate="nav.contact">Contact Us</h1>
+            <p>Let's bring your ideas to life. Get in touch with us today!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form fade-up">
+                <h2 style="margin-bottom: 2rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="sections.sendMessage">Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name" data-translate="sections.name">Name</label>
+                        <input type="text" id="name" name="name" required data-translate-placeholder="sections.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="sections.email">Email</label>
+                        <input type="email" id="email" name="email" required data-translate-placeholder="sections.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="sections.message">Message</label>
+                        <textarea id="message" name="message" required data-translate-placeholder="sections.message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-translate="sections.sendMessage">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-item fade-up">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-blue);" data-translate="sections.contactInfo">Contact Information</h3>
+                    <div style="color: var(--text-secondary); line-height: 2;">
+                        <p style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">📍 Address:</strong><br>
+                            Magadi Road,Nairobi City<br>
+                            00100, Kenya
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">📧 Email:</strong><br>
+                            contact@developerscomplex.com<br>
+                            info@developerscomplex.com
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">📞 Phone:</strong><br>
+                            +254 (718) 733-968<br>
+                            +254 (718) 733-968
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">🕒 Business Hours:</strong><br>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 4:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Map with Google Maps Embed -->
+                <div class="contact-item fade-up">
+                  <div class="map-placeholder">
+                    <iframe 
+                         src=<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316.626010788333!2d36.75227020254429!3d-1.3971226964794758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05e96c9c51c3%3A0x1cecd9c534996a6b!2sCleanshelf!5e1!3m2!1sen!2ske!4v1762298284097!5m2!1sen!2ske"
+                         width="100%" 
+                         height="450" 
+                         style="border:0;" 
+                         allowfullscreen="" 
+                         loading="lazy" 
+                         referrerpolicy="no-referrer-when-downgrade">
+                     </iframe>
+                     </div>
+                 </div>
+
+                <!-- Social Links -->
+                <div class="contact-item fade-up">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-purple);" data-translate="sections.followUs">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <span>📱</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <span>💼</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                            <span>🐦</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div style="margin-top: 4rem;">
+            <div class="glass-card fade-up" style="max-width: 900px; margin: 0 auto; padding: 3rem; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Why Choose Complex Developers?
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; text-align: left;">
+                    <div>
+                        <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">⚡ Quick Response</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            We respond to all inquiries within 24 hours.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-purple); margin-bottom: 0.5rem;">💬 Free Consultation</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Get a free consultation to discuss your project needs.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">🎯 Custom Solutions</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Tailored solutions designed specifically for your business.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-purple); margin-bottom: 0.5rem;">🔒 Confidentiality</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Your ideas and information are kept completely confidential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Complex Developers</h3>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">
+                    Transforming ideas into digital reality with cutting-edge technology solutions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.quickLinks">Quick Links</h3>
+                <a href="index.html" data-translate="nav.home">Home</a>
+                <a href="services.html" data-translate="nav.services">Services</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="about.html" data-translate="nav.about">About</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.services">Services</h3>
+                <a href="services.html">Web Development</a>
+                <a href="services.html">AI Integration</a>
+                <a href="services.html">App Development</a>
+                <a href="services.html">Cloud Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer.resources">Resources</h3>
+                <a href="about.html" data-translate="sections.ourStory">Our Story</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer.copyright">© 2024 Complex Developers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">↑</button>
+
+    <!-- Floating Quote Button -->
+    <a href="contact.html" class="quote-button" data-translate="sections.getQuote">Get a Quote</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
