@@ -99,6 +99,30 @@ const translations = {
       appDevelopment: {
         name: "App Development",
         desc: "Native and cross-platform mobile applications for iOS, Android, and beyond."
+      },
+      postersCreation: {
+        name: "Posters Creation",
+        desc: "Professional and eye-catching poster designs for marketing, events, and promotional campaigns."
+      },
+      contentWriting: {
+        name: "Content Writing",
+        desc: "Engaging and SEO-optimized content that resonates with your audience and drives conversions."
+      },
+      emailMarketing: {
+        name: "Email Marketing and Automation",
+        desc: "Strategic email campaigns and automated workflows to nurture leads and engage customers effectively."
+      },
+      analytics: {
+        name: "Analytics",
+        desc: "Comprehensive data analytics and insights to track performance, understand user behavior, and make data-driven decisions."
+      },
+      businessDigitization: {
+        name: "Full Business Digitization Package",
+        desc: "Complete end-to-end digital transformation solutions to modernize your entire business operations and processes."
+      },
+      saasDevelopment: {
+        name: "SaaS (Software-as-a-Service) Development",
+        desc: "Scalable cloud-based software solutions delivered as a service, enabling subscription-based business models."
       }
     },
     portfolio: {
@@ -214,6 +238,30 @@ const translations = {
       appDevelopment: {
         name: "Développement d'Applications",
         desc: "Applications mobiles natives et multiplateformes."
+      },
+      postersCreation: {
+        name: "Création d'Affiches",
+        desc: "Conceptions d'affiches professionnelles et accrocheuses pour le marketing, les événements et les campagnes promotionnelles."
+      },
+      contentWriting: {
+        name: "Rédaction de Contenu",
+        desc: "Contenu engageant et optimisé pour le SEO qui résonne avec votre audience et génère des conversions."
+      },
+      emailMarketing: {
+        name: "Marketing par Email et Automatisation",
+        desc: "Campagnes email stratégiques et workflows automatisés pour nourrir les leads et engager efficacement les clients."
+      },
+      analytics: {
+        name: "Analytique",
+        desc: "Analyses de données complètes et insights pour suivre les performances, comprendre le comportement des utilisateurs et prendre des décisions basées sur les données."
+      },
+      businessDigitization: {
+        name: "Package Complet de Numérisation d'Entreprise",
+        desc: "Solutions complètes de transformation numérique de bout en bout pour moderniser toutes vos opérations et processus commerciaux."
+      },
+      saasDevelopment: {
+        name: "Développement SaaS (Logiciel en tant que Service)",
+        desc: "Solutions logicielles cloud évolutives livrées en tant que service, permettant des modèles commerciaux basés sur l'abonnement."
       }
     },
     portfolio: {
@@ -329,6 +377,30 @@ const translations = {
       appDevelopment: {
         name: "Desarrollo de Aplicaciones",
         desc: "Aplicaciones móviles nativas y multiplataforma."
+      },
+      postersCreation: {
+        name: "Creación de Pósters",
+        desc: "Diseños de pósters profesionales y llamativos para marketing, eventos y campañas promocionales."
+      },
+      contentWriting: {
+        name: "Redacción de Contenido",
+        desc: "Contenido atractivo y optimizado para SEO que resuena con tu audiencia y genera conversiones."
+      },
+      emailMarketing: {
+        name: "Marketing por Email y Automatización",
+        desc: "Campañas de email estratégicas y flujos de trabajo automatizados para nutrir leads y comprometer clientes de manera efectiva."
+      },
+      analytics: {
+        name: "Analítica",
+        desc: "Análisis de datos completos e insights para rastrear el rendimiento, entender el comportamiento del usuario y tomar decisiones basadas en datos."
+      },
+      businessDigitization: {
+        name: "Paquete Completo de Digitalización Empresarial",
+        desc: "Soluciones completas de transformación digital de extremo a extremo para modernizar todas sus operaciones y procesos comerciales."
+      },
+      saasDevelopment: {
+        name: "Desarrollo SaaS (Software como Servicio)",
+        desc: "Soluciones de software basadas en la nube escalables entregadas como servicio, permitiendo modelos de negocio basados en suscripción."
       }
     },
     portfolio: {
@@ -444,6 +516,30 @@ const translations = {
       appDevelopment: {
         name: "Maendeleo ya Programu",
         desc: "Programu za simu za asili na za jukwaa nyingi."
+      },
+      postersCreation: {
+        name: "Uundaji wa Madaftari",
+        desc: "Miundo ya kitaalamu na ya kuvutia ya madaftari kwa masoko, matukio, na kampeni za kukuza."
+      },
+      contentWriting: {
+        name: "Kuandika Maudhui",
+        desc: "Maudhui ya kuvutia na yaliyoboreshwa kwa SEO ambayo huwavutia hadhira yako na kuongeza uongofu."
+      },
+      emailMarketing: {
+        name: "Masoko ya Barua Pepe na Otomatiki",
+        desc: "Kampeni za barua pepe za kimkakati na mifumo ya otomatiki ya kukuza wateja na kuwashirikisha wateja kwa ufanisi."
+      },
+      analytics: {
+        name: "Uchambuzi wa Takwimu",
+        desc: "Uchambuzi kamili wa takwimu na maarifa ya kufuatilia utendakazi, kuelewa tabia ya watumiaji, na kufanya maamuzi yanayotegemea data."
+      },
+      businessDigitization: {
+        name: "Kifurushi Kamili cha Kidijitali cha Biashara",
+        desc: "Suluhisho kamili za mabadiliko ya kidijitali kutoka mwanzo hadi mwisho za kisasa za shughuli zote za biashara na michakato."
+      },
+      saasDevelopment: {
+        name: "Maendeleo ya SaaS (Programu kama Huduma)",
+        desc: "Suluhisho za programu za wingu zinazoweza kupanuka zinazotolewa kama huduma, zikiwezesha mifumo ya biashara ya usajili."
       }
     },
     portfolio: {
@@ -559,6 +655,30 @@ const translations = {
       appDevelopment: {
         name: "App-Entwicklung",
         desc: "Native und plattformübergreifende mobile Anwendungen."
+      },
+      postersCreation: {
+        name: "Poster-Erstellung",
+        desc: "Professionelle und auffällige Poster-Designs für Marketing, Veranstaltungen und Werbekampagnen."
+      },
+      contentWriting: {
+        name: "Content-Erstellung",
+        desc: "Ansprechende und SEO-optimierte Inhalte, die bei Ihrer Zielgruppe Anklang finden und Conversions fördern."
+      },
+      emailMarketing: {
+        name: "E-Mail-Marketing und Automatisierung",
+        desc: "Strategische E-Mail-Kampagnen und automatisierte Workflows zur Lead-Pflege und effektiven Kundenbindung."
+      },
+      analytics: {
+        name: "Analytik",
+        desc: "Umfassende Datenanalyse und Erkenntnisse zur Leistungsverfolgung, zum Verständnis des Nutzerverhaltens und zur datengestützten Entscheidungsfindung."
+      },
+      businessDigitization: {
+        name: "Vollständiges Business-Digitalisierungspaket",
+        desc: "Komplette End-to-End-Digitalisierungslösungen zur Modernisierung Ihrer gesamten Geschäftsabläufe und Prozesse."
+      },
+      saasDevelopment: {
+        name: "SaaS-Entwicklung (Software-as-a-Service)",
+        desc: "Skalierbare cloud-basierte Softwarelösungen, die als Service bereitgestellt werden und abonnementbasierte Geschäftsmodelle ermöglichen."
       }
     },
     portfolio: {
@@ -674,6 +794,30 @@ const translations = {
       appDevelopment: {
         name: "تطوير التطبيقات",
         desc: "تطبيقات محمولة أصلية ومتعددة المنصات."
+      },
+      postersCreation: {
+        name: "إنشاء الملصقات",
+        desc: "تصاميم ملصقات احترافية وجذابة للتسويق والفعاليات والحملات الترويجية."
+      },
+      contentWriting: {
+        name: "كتابة المحتوى",
+        desc: "محتوى جذاب ومحسّن لمحركات البحث يلقى صدى لدى جمهورك ويدفع التحويلات."
+      },
+      emailMarketing: {
+        name: "التسويق عبر البريد الإلكتروني والأتمتة",
+        desc: "حملات بريد إلكتروني استراتيجية وسير عمل آلي لتغذية العملاء المحتملين وإشراك العملاء بفعالية."
+      },
+      analytics: {
+        name: "التحليلات",
+        desc: "تحليلات بيانات شاملة ورؤى لتتبع الأداء وفهم سلوك المستخدم واتخاذ قرارات مدعومة بالبيانات."
+      },
+      businessDigitization: {
+        name: "حزمة التحول الرقمي الكاملة للأعمال",
+        desc: "حلول تحول رقمي شاملة من البداية للنهاية لتحديث جميع عملياتك وعمليات عملك."
+      },
+      saasDevelopment: {
+        name: "تطوير SaaS (البرمجيات كخدمة)",
+        desc: "حلول برمجية قابلة للتوسع قائمة على السحابة يتم تقديمها كخدمة، مما يتيح نماذج أعمال قائمة على الاشتراك."
       }
     },
     portfolio: {
