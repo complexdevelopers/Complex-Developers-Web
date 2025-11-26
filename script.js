@@ -1090,23 +1090,147 @@ function initPortfolioFilter() {
   });
 }
 
+// === EmailJS Configuration ===
+// 
+// SETUP INSTRUCTIONS:
+// 1. Go to https://dashboard.emailjs.com and create a free account
+// 2. Create an Email Service (Gmail, Outlook, etc.) and copy the SERVICE_ID
+// 3. Create an Email Template with these variables:
+//    - {{from_name}} - Sender's name
+//    - {{from_email}} - Sender's email
+//    - {{message}} - Message content
+//    - {{to_email}} - Recipient email (optional)
+// 4. Copy the TEMPLATE_ID from your template
+// 5. Go to Account > API Keys and copy your PUBLIC_KEY
+// 6. Replace the values below with your credentials
+//
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'YOUR_SERVICE_ID',      // Your EmailJS Service ID
+  TEMPLATE_ID: 'YOUR_TEMPLATE_ID',    // Your EmailJS Template ID
+  PUBLIC_KEY: 'YOUR_PUBLIC_KEY'        // Your EmailJS Public Key
+};
+
 // === Contact Form Handler ===
 function initContactForm() {
   const form = document.querySelector('.contact-form form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  // Initialize EmailJS when SDK is loaded (check periodically if not loaded yet)
+  const initEmailJS = () => {
+    if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    } else if (EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      // Retry after a short delay if SDK not loaded yet
+      setTimeout(initEmailJS, 100);
+    }
+  };
+  initEmailJS();
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn ? submitBtn.textContent : '';
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
+    // Check if EmailJS is configured
+    if (EMAILJS_CONFIG.SERVICE_ID === 'service_903s2j8' || 
+        EMAILJS_CONFIG.TEMPLATE_ID === 'template_l6mvkpc' || 
+        EMAILJS_CONFIG.PUBLIC_KEY === 'R2Xn7mUUj4SgdJQqw') {
+      alert('EmailJS is not configured. Please add your Service ID, Template ID, and Public Key in script.js');
+      return;
+    }
+
+    // Check if EmailJS is loaded
+    if (typeof emailjs === 'undefined') {
+      alert('EmailJS SDK is not loaded. Please check your internet connection.');
+      return;
+    }
+
     // Get form data
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
+    const templateParams = {
+      from_name: formData.get('name'),
+      from_email: formData.get('email'),
+      message: formData.get('message'),
+      to_email: 'contact@developerscomplex.com' // Your receiving email
+    };
 
-    // Here you would normally send to Formspree, EmailJS, or your backend
-    // For now, we'll just show an alert
-    alert('Thank you for your message! We will get back to you soon.');
-    form.reset();
+    // Show loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
+
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+
+      // Success
+      if (response.status === 200) {
+        // Show success message
+        showFormMessage('success', 'Thank you for your message! We will get back to you soon.');
+        form.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      // Show error message
+      showFormMessage('error', 'Sorry, there was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      // Reset button state
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
   });
+}
+
+// === Show Form Message ===
+function showFormMessage(type, message) {
+  // Remove existing messages
+  const existingMessage = document.querySelector('.form-message');
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  // Create message element
+  const messageEl = document.createElement('div');
+  messageEl.className = `form-message form-message-${type}`;
+  messageEl.textContent = message;
+  messageEl.style.cssText = `
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+    ${type === 'success' 
+      ? 'background: rgba(0, 212, 255, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue);' 
+      : 'background: rgba(255, 0, 0, 0.1); color: #ff4444; border: 1px solid #ff4444;'
+    }
+  `;
+
+  // Insert after form
+  const form = document.querySelector('.contact-form form');
+  if (form) {
+    form.parentNode.insertBefore(messageEl, form.nextSibling);
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      messageEl.style.opacity = '0';
+      messageEl.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => messageEl.remove(), 300);
+    }, 5000);
+  } else {
+    // Fallback to alert if form not found
+    alert(message);
+  }
 }
 
 // === Initialize Everything ===
