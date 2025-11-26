@@ -1105,9 +1105,9 @@ function initPortfolioFilter() {
 // 6. Replace the values below with your credentials
 //
 const EMAILJS_CONFIG = {
-  SERVICE_ID: 'YOUR_SERVICE_ID',      // Your EmailJS Service ID
-  TEMPLATE_ID: 'YOUR_TEMPLATE_ID',    // Your EmailJS Template ID
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY'        // Your EmailJS Public Key
+  SERVICE_ID: 'service_ehrdd8k',      // Your EmailJS Service ID
+  TEMPLATE_ID: 'template_l6mvkpc',    // Your EmailJS Template ID
+  PUBLIC_KEY: 'R2Xn7mUUj4SgdJQqw'        // Your EmailJS Public Key
 };
 
 // === Contact Form Handler ===
@@ -1133,9 +1133,9 @@ function initContactForm() {
     e.preventDefault();
     
     // Check if EmailJS is configured
-    if (EMAILJS_CONFIG.SERVICE_ID === 'service_903s2j8' || 
-        EMAILJS_CONFIG.TEMPLATE_ID === 'template_l6mvkpc' || 
-        EMAILJS_CONFIG.PUBLIC_KEY === 'R2Xn7mUUj4SgdJQqw') {
+    if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' || 
+        EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+        EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
       alert('EmailJS is not configured. Please add your Service ID, Template ID, and Public Key in script.js');
       return;
     }
@@ -1145,7 +1145,7 @@ function initContactForm() {
       alert('EmailJS SDK is not loaded. Please check your internet connection.');
       return;
     }
-
+    
     // Get form data
     const formData = new FormData(form);
     const templateParams = {
@@ -1173,7 +1173,7 @@ function initContactForm() {
       if (response.status === 200) {
         // Show success message
         showFormMessage('success', 'Thank you for your message! We will get back to you soon.');
-        form.reset();
+    form.reset();
       } else {
         throw new Error('Failed to send message');
       }
