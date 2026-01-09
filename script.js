@@ -844,6 +844,31 @@ const translations = {
   }
 };
 
+// chatbot
+.floating-icon {
+  position: fixed;
+  bottom: 20px;        /* distance from bottom */
+  left: 50%;           /* move to horizontal center */
+  transform: translateX(-50%); /* perfect centering */
+
+  width: 60px;
+  height: 60px;
+
+  background: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  z-index: 9999;       /* stays above other elements */
+}
+
+
+
 // === Current Language State ===
 // Get language from localStorage or default to English
 let currentLang = localStorage.getItem('language') || 'en';
