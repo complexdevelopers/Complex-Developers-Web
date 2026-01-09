@@ -845,7 +845,7 @@ const translations = {
 };
 
 // chatbot
-.floating-icon {
+floating-icon {
   position: fixed;
   bottom: 20px;        /* distance from bottom */
   left: 50%;           /* move to horizontal center */
