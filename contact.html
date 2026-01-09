@@ -65,9 +65,10 @@
     <section class="section">
         <div class="contact-container">
             <!-- Contact Form -->
+            <form action = "https://formspree.io/f/xojvgonw" method = "POST">
             <div class="contact-form fade-up">
                 <h2 style="margin-bottom: 2rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-translate="sections.sendMessage">Send Us a Message</h2>
-                <form action = "https://formspree.io/f/xojvgonw" method = "POST">
+                <form>
                     <div class="form-group">
                         <label for="name" data-translate="sections.name">Name</label>
                         <input type="text" id="name" name="name" required data-translate-placeholder="sections.name">
@@ -81,6 +82,7 @@
                         <textarea id="message" name="message" required data-translate-placeholder="sections.message"></textarea>
                     </div>
                     <button type="submit" class="submit-btn" data-translate="sections.sendMessage">Send Message</button>
+                </form>
                 </form>
             </div>
 
@@ -216,4 +218,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
