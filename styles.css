@@ -1507,8 +1507,6 @@ body {
   justify-content: flex-start;
 }
 
-
-// chatbot
 .floating-icon {
   position: fixed;
   bottom: 20px;        /* distance from bottom */
