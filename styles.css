@@ -156,9 +156,10 @@ body {
 }
 
 .logo img {
-  height: 40px;
-  /* Adjust this to make logo bigger/smaller */
-  width: auto;
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  border-radius: 8px;
   display: block;
 }
 
@@ -209,6 +210,7 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-left: 2rem;
 }
 
 .theme-toggle {
@@ -439,13 +441,15 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 /* === Glass Cards === */
@@ -479,13 +483,18 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: var(--border-glass);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .service-card::before {
@@ -1016,6 +1025,11 @@ body {
 
 .footer-section a:hover {
   color: var(--accent-blue);
+  transform: translateX(5px);
+}
+
+.footer-section a {
+  transition: all 0.2s ease;
 }
 
 .footer-bottom {
@@ -1028,8 +1042,8 @@ body {
 /* === Scroll to Top Button === */
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
   background: var(--accent-gradient);
@@ -1040,9 +1054,12 @@ body {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--glow-blue);
-  z-index: 999;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-top.visible {
@@ -1058,26 +1075,36 @@ body {
 /* === Quote Button === */
 .quote-button {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 1rem 1.5rem;
+  bottom: 80px;
+  /* Stacked above scroll-top */
+  right: 20px;
+  padding: 0.8rem 1.2rem;
   background: var(--accent-gradient);
   color: white;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 12px;
   font-weight: 600;
+  font-size: 0.9rem;
   box-shadow: var(--glow-purple);
-  transition: all 0.3s ease;
-  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100px);
 }
 
 .quote-button:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 10px 40px rgba(176, 38, 255, 0.6);
 }
 
 .quote-button.active {
-  bottom: 6rem;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 
 /* === Animations === */
@@ -1107,29 +1134,44 @@ body {
 /* === Floating WhatsApp Button === */
 .whatsapp-float {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  /* Opposite of scroll-top button */
+  bottom: 20px;
+  left: 20px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-5px);
   background-color: #128c7e;
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
+
+/* === Chatbot Wrapper Alignment === */
+.floating-icon {
+  position: fixed;
+  bottom: 140px;
+  /* Stacked above quote button */
+  right: 20px;
+  z-index: 1002;
+}
+
+/* Force override Chatling widget positioning */
+#chtl-chat-icon-container,
+#chtl-widget-container-box {
+  bottom: 140px !important;
+  right: 20px !important;
 }
 
 /* === FAQ Section Styles === */
@@ -1391,6 +1433,21 @@ body {
 .process-step:hover .process-content {
   transform: translateX(10px);
   border-color: var(--accent-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.process-step:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.process-step:nth-child(even) .process-content {
+  margin-right: -10px;
+  /* Slight offset for dynamic look */
+}
+
+.process-step:nth-child(even):hover .process-content {
+  transform: translateX(-10px);
 }
 
 /* === Success Counters Styles === */
